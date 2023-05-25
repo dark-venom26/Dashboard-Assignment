@@ -99,7 +99,7 @@ const RevenueByMonthsChart = ({setFilterData}) => {
     }
     const index = printElementAtEvent(getElementAtEvent(chart, e));
 
-    if (!index){
+    if (index === undefined){
       return;
     }
 
