@@ -1,0 +1,53 @@
+@use '../../scss/abstracts/' as *;
+
+.summary-box{
+    @include flex(stretch, flex-start);
+    gap: 5px;
+
+    &__chart{
+        width: 40%;
+
+        &__value{
+            font-weight: 600;
+        }
+    }
+
+    &__info{
+        width: 60%;
+        @include flex(flex-start, space-between);
+        flex-direction: column;
+
+        &__title{
+            font-size: $fontSizeMedium;
+            font-weight: 600;
+            line-height: 1.7;
+
+            span{
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+
+        &__value{
+            font-weight: 600;
+            font-size: $fontSizeLarge;
+            color: $black;
+        }
+    }
+}
+
+.summary-box-special{
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 100%;
+
+    &__title{
+        font-weight: 600;
+        font-size: $fontSizeMedium;
+    }
+
+    &__value{
+        font-size: $fontSizeLarge;
+        font-weight: 600;
+    }
+}
